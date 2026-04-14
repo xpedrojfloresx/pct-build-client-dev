@@ -1,58 +1,63 @@
-# 🚀 Trivia Game - Plaza Cielo Tierra (Modo Developer)
+# 🚀 Trivia Game - Plaza Cielo Tierra
 
-Este repositorio contiene el sistema de trivia interactivo desarrollado para el museo **Plaza Cielo Tierra**. El proyecto está diseñado como una aplicación móvil multiplataforma que utiliza **UI Toolkit** para la interfaz y un backend en **Supabase** para la gestión de datos.
-
----
-
-## 🛠 Requisitos Previos
-
-Antes de compilar, asegúrate de contar con:
-
-* **Unity Editor**: Versión 2021.3 LTS o superior (requerido para el soporte estable de UI Toolkit y Panel Settings).
-* **Módulos de Build**: Soporte para Android/iOS instalado en el Unity Hub.
-* **Font Assets**: Asegúrate de tener los archivos SDF de las fuentes en la carpeta `Assets/OG/UI/Fonts/`.
+This repository contains the production-ready source code and assets for the **Plaza Cielo Tierra** science museum interactive trivia game. Designed as a cross-platform simulation, the project integrates **Unity UI Toolkit** with a **Supabase** backend to provide a seamless, real-time competitive experience.
 
 ---
 
-## 🔧 Configuración del Entorno
-
-### 1. Integración con Supabase
-El sistema registra automáticamente el desempeño de los jugadores en la base de datos.
-* Configura las credenciales en el componente `SupabaseService` en la escena.
-* Los datos recolectados incluyen: Usuario, Nombre, Apellido, Edad, País y Puntos.
-
-### 2. UI y Estilos Globales (Theme Style Sheet)
-Para evitar errores visuales en el despliegue, el proyecto utiliza un sistema de **Theme** global.
-* El archivo `SETTING (Panel Settings)` debe tener asignado un **Theme Style Sheet** personalizado para gestionar los estilos de los dropdowns y fuentes dinámicas.
-* Verifica que el archivo `.uss` esté vinculado al Theme para que las clases como `.unity-base-dropdown__container-outer` funcionen correctamente.
+## 🔗 Live Deployment
+You can access the live version of the game here:
+**[[]](https://xpedrojfloresx.github.io/pct-build-client-dev/)**
 
 ---
 
-## 📦 Despliegue en Modo Developer
+## 🌐 Deployment Configuration
 
-Para realizar una build de prueba con acceso a logs y debugging:
+This repository is optimized for deployment. Key configurations include:
 
-1.  Ve a **File > Build Settings**.
-2.  Asegúrate de que la plataforma sea **Android** o **iOS**.
-3.  Activa la casilla **Development Build**.
-4.  Activa **Script Debugging** para permitir el seguimiento de errores en tiempo real.
-5.  Haz clic en **Build and Run**.
+### 1. Backend Integration (Supabase)
+The application is pre-configured to communicate with a Supabase instance for data persistence.
+* **Real-time Scoring**: Player scores are pushed to the database upon completion.
+* **Data Collection**: The system captures user demographics (Name, Surname, Age, Country) alongside performance metrics for museum analytics.
+* **Service Setup**: Ensure the `SupabaseService` component in the main scene is updated with the production URL and Anon Key.
+
+### 2. Global UI Theming (Panel Settings)
+To ensure visual consistency across different mobile devices and resolutions:
+* **Theme Management**: The project utilizes a custom **Theme Style Sheet** assigned to the `Panel Settings` asset.
+* **Global Styles**: Critical UI fixes, such as the flicker-free dropdown menus and pixel-art font rendering, are handled through global USS files linked to the Theme.
+* **Performance**: UI rendering is optimized via the `Scale With Screen Size` mode, targeting a 1080x1920 reference resolution.
+
+### 3. Mobile Optimization
+* **Touch-First Navigation**: Scrollbars are hidden via USS to favor native touch gestures on mobile devices.
+* **Dynamic Anchoring**: The country selection dropdown uses a script-based anchoring system (`worldBound`) to ensure the menu always appears correctly aligned with the input field regardless of device aspect ratio.
+
+---
+
+## 👨‍💻 Developer Information
+
+This project was developed as a final thesis for the **Virtual Simulations and Video Games Development** degree at **Colegio Universitario IES 21**.
+
+**[Your Name]**
+* **Role**: Junior Full Stack Developer & Technical Artist
+* **Location**: Córdoba, Argentina
+* **Specialization**: 3D Web Technologies (Three.js/Babylon.js), Unity Technical Art, and Full Stack Development.
+
+**Connect with me:**
+* **LinkedIn**: [[]](https://www.linkedin.com/in/pedro-flores-dev/)
+* **Portfolio**: [[]](https://portfolio-pedrojflores.vercel.app/)
+* **Email**: pflores0213@gmail.com
 
 ---
 
-## 🧪 Pruebas y Debugging
-
-* **Formulario de Datos**: Para probar la validación de campos sin jugar una partida, usa el botón derecho sobre el script `TriviaGameUIController` en el Inspector y selecciona **Debug: Show PanelDatos**.
-* **Lógica de Red**: El `QuizGameManager` permite iniciar partidas de prueba con dificultad ajustable (por defecto: `Easy`) y carga de categorías desde la base de datos.
-* **Localización**: Puedes alternar entre **Español** e **Inglés** desde el `GameManager`. El sistema actualizará automáticamente etiquetas como "TIME LEFT", "TIEMPO RESTANTE" y el placeholder del selector de nombre.
+## 📄 License
+*This project is part of a technical thesis and is intended for use by the Plaza Cielo Tierra Science Museum.*
 
 ---
 
-## 📝 Notas Técnicas del Desarrollador
+## 👥 Team & Collaborators
 
-* **Dropdown de Países**: Se incluye una lista predefinida de 28 países. El despliegue de la lista tiene un límite de altura programado (`max-height`) para evitar que cubra toda la pantalla en dispositivos móviles.
-* **Gestión de Tareas**: Al reiniciar la UI o cambiar de pantalla, el controlador cancela las tareas programadas (como el `_thanksScreenTask`) para evitar fugas de memoria o llamadas a objetos destruidos.
-* **Anclaje de UI**: El dropdown utiliza un cálculo de `worldBound` para posicionarse siempre debajo del campo de selección, independientemente de la resolución del teléfono.
+This project was a collaborative effort, and I would like to acknowledge the hard work and contributions of my teammates:
 
----
-*Este proyecto es parte del trabajo final de grado para Colegio Universitario IES 21.*
+* **Matías Gómez**: Lead Programmer and partner for the degree thesis project.
+* **Nicolás Álvarez**: Artist and Game Designer.
+
+Working together, we ensured the technical and artistic success of the trivia system for the museum.
