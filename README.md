@@ -6,7 +6,7 @@ This repository contains the production-ready source code and assets for the **P
 
 ## 🔗 Live Deployment
 You can access the live version of the game here:
-**[[]](https://xpedrojfloresx.github.io/pct-build-client-dev/)**
+**[[https://xpedrojfloresx.github.io/pct-build-client-dev/]]**
 
 ---
 
@@ -42,9 +42,9 @@ This project was developed as a final thesis for the **Virtual Simulations and V
 * **Specialization**: 3D Web Technologies (Three.js/Babylon.js), Unity Technical Art, and Full Stack Development.
 
 **Connect with me:**
-* **LinkedIn**: [[]](https://www.linkedin.com/in/pedro-flores-dev/)
-* **Portfolio**: [[]](https://portfolio-pedrojflores.vercel.app/)
-* **Email**: pflores0213@gmail.com
+* **LinkedIn**: [[https://www.linkedin.com/in/pedro-flores-dev/]]
+* **Portfolio**: [[https://portfolio-pedrojflores.vercel.app/]]
+* **Email**: [[pflores0213@gmail.com]]
 
 ---
 
