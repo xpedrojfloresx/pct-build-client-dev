@@ -36,7 +36,7 @@ To ensure visual consistency across different mobile devices and resolutions:
 
 This project was developed as a final thesis for the **Virtual Simulations and Video Games Development** degree at **Colegio Universitario IES 21**.
 
-**[Your Name]**
+**Pedro Flores**
 * **Role**: Junior Full Stack Developer & Technical Artist
 * **Location**: Córdoba, Argentina
 * **Specialization**: 3D Web Technologies (Three.js/Babylon.js), Unity Technical Art, and Full Stack Development.
